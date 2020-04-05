@@ -103,6 +103,11 @@ $(document).ready(function(){
                 }
             });
         }
+    }).keyup(function (event) {
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if (keycode == '13'){
+            $("#search-button").click();
+        }
     });
 
     $(document).on("mouseenter", ".name", function() {
